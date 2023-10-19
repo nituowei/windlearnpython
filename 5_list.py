@@ -2,7 +2,7 @@
 #dictionary下个章节讲解
 #list  把多个数值存储到一个变量中
 
-#通过中括号来包含多个变量
+#list是通过中括号来包含多个变量的
 fruits = ["apple", "orange", "banana", "coconut"]
 
 # #通过索引（从第一个0，1，2...）的形式来读取
