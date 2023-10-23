@@ -1,8 +1,12 @@
-#python中的集合类型  list, sets, tuple
-#dictionary下个章节讲解
-#list  把多个数值存储到一个变量中
+# python中的集合类型  list, set, tuple
+# dictionary下个章节讲解
+# list  把多个数值存储到一个变量中
+"""
+列表(list)是 Python 最常用的类型,就像生活中的购物单一样。它是一串有序可变的元素集合,
+可以添加、删除和修改列表中的元素。适合存储需要频繁变动的数据,比如学生姓名列表。
+"""
 
-#list是通过中括号来包含多个变量的
+#list是通过中括号 [] 来包含多个变量的
 fruits = ["apple", "orange", "banana", "coconut"]
 
 # #通过索引（从第一个0，1，2...）的形式来读取
