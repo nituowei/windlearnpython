@@ -34,10 +34,10 @@ print(type(like_cold))  # print the type of the variable
 '''
 
 #change types
-age = 21 # age is int
-age = float(age) #age is float now
-print(age)
-print(type(age))
+# age = 21 # age is int
+# age = float(age) #age is float now
+# print(age)
+# print(type(age))
 
 
 '''
@@ -55,4 +55,4 @@ x = 1
 x = x + 1 # equals : x += 1
 x += 1 # x-=1 ,  x *=1 , x /= 1 etc will work as expected.
 print(x)
-''
+'''
