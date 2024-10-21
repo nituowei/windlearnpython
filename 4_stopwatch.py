@@ -31,3 +31,18 @@ for x in range(my_time, 0, -1):  #需要实现超过60秒就显示一分钟
     #print(x+1)
     time.sleep(1)
 print("Time is up!")
+
+
+#以下代码加入了try和excep，来确保一些已知的可能会产生的错误有应对的方法
+# while True:
+#     try:
+#         my_count_down = int(input("Enter a number: "))
+#         break
+#     except ValueError:
+#         print("输入错误！请输入一个整数。")
+
+# for x in range(my_count_down):
+#     print(x+1, flush=True, end=" ")
+#     time.sleep(1)
+
+# print(f"time is up")
