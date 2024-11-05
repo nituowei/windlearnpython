@@ -69,3 +69,93 @@ for x in students:
     # print(students.index(x) + 1) 
     print(f"{x} 在第{order}个位置")
 """
+
+# ----------
+
+"""
+students = ["张三", "李四", "王五", "赵六"]
+
+students.append("孙七")
+students.remove("王五")
+students.append("孙七")
+students.append("孙七")
+students.append("孙七")
+
+for x in students:
+    order = students.index(x) + 1
+    # print(students.index(x) + 1) 
+    print(f"{x} 在第{order}个位置")
+
+count_name = students.count("孙七")
+print(f"孙七出现了{count_name}次")
+
+以上代码有一个功能是输出“孙七”在什么位置，
+但是因为有四个孙七，所以第五个以及后面的孙七的位置数字就不对了，
+而是错误的显示为第4个，请问怎么样才能让这种相同元素也可以正确的显示各自正确的index信息
+
+------
+### 问题分析
+
+当前代码中，`students.index(x)` 方法会返回列表中第一次出现 `x` 的索引位置。因此，对于重复的元素（如 "孙七"），它总是返回第一个 "孙七" 的索引位置，导致后续的 "孙七" 位置显示不正确。
+
+### 解决方案
+
+为了正确显示每个 "孙七" 的位置，可以使用 `enumerate` 函数来遍历列表，这样可以直接获取每个元素的索引和值。
+
+### 修改后的代码
+
+```python
+students = ["张三", "李四", "王五", "赵六"]
+
+# 添加和删除学生
+students.append("孙七")
+students.remove("王五")
+students.append("孙七")
+students.append("孙七")
+students.append("孙七")
+
+# 使用 enumerate 遍历列表，获取每个元素的索引和值
+for index, student in enumerate(students):
+    order = index + 1
+    print(f"{student} 在第{order}个位置")
+
+# 统计 "孙七" 出现的次数
+count_name = students.count("孙七")
+print(f"孙七出现了{count_name}次")
+```
+
+### 代码解释
+
+1. **初始化学生列表**：
+   ```python
+   students = ["张三", "李四", "王五", "赵六"]
+   ```
+
+2. **添加和删除学生**：
+   ```python
+   students.append("孙七")
+   students.remove("王五")
+   students.append("孙七")
+   students.append("孙七")
+   students.append("孙七")
+   ```
+
+3. **使用 `enumerate` 遍历列表**：
+   ```python
+   for index, student in enumerate(students):
+       order = index + 1
+       print(f"{student} 在第{order}个位置")
+   ```
+   - `enumerate(students)` 返回一个枚举对象，其中包含每个元素的索引和值。
+   - `index` 是当前元素的索引，`student` 是当前元素的值。
+   - `order = index + 1` 计算当前元素的位置（从1开始）。
+
+4. **统计 "孙七" 出现的次数**：
+   ```python
+   count_name = students.count("孙七")
+   print(f"孙七出现了{count_name}次")
+   ```
+
+这样修改后，每个 "孙七" 的位置都会正确显示。
+
+"""
