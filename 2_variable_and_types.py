@@ -2,6 +2,7 @@
 x=5
 y=12
 age=x + y
+print("My age is " + age + ".")  // TypeError: can only concatenate str (not "int") to str , 需要将int转换为str
 print("My age is " + str(age) + ".")
 """
 
@@ -42,17 +43,53 @@ print(type(like_cold))  # print the type of the variable
 
 '''
 #python中的运算符
-
 #四则
-x = 1
-x = x + 1 # equals : x += 1
-x += 1 # x-=1 ,  x *=1 , x /= 1 etc will work as expected.
-print(x)
-
-
 #python中的运算符
 x = 1
 x = x + 1 # equals : x += 1
 x += 1 # x-=1 ,  x *=1 , x /= 1 etc will work as expected.
 print(x)
 '''
+
+'''
+我发现这里没有说一些运算符的作用
+比如百分号: %, 意思的取余数. 和调用了math 模块的mod 函数是一样的效果.
+另外, 四舍五入的函数是round, 而 ceiling和floor 函数是math模块中的函数. 分别代表向上和向下取整. 
+ceiling 是天花板, floor 是地板. 他们分别表示上限和下限.
+另外, 还有一个函数是abs, 代表绝对值.
+'''
+# 取余数
+
+
+# import math
+
+# x = 10
+# y = 3
+# # z = x % y
+# # print(z,z1)  # 输出 1
+
+# # 四舍五入
+# z1 = math.ceil(x / y)
+# z2 = math.floor(x / y)
+# z3 = round(x / y)
+# print(z3)  # 输出 3
+# print(z2)  # 输出 3
+# print(z1)  # 输出 4
+# # 向上取整
+
+
+
+#圆周率pi 
+import math
+print(math.pi)  # 输出 3.141592653589793
+
+#圆的周长和面积
+pi = math.pi
+radius = input("请输入圆的半径: ")
+radius = float(radius)  # 将输入的字符串转换为浮点数
+# 计算圆的周长和面积
+circumference = 2 * pi * radius
+area = pi * (radius ** 2)
+print(f"圆的周长为: {(round(circumference, 2))}")
+print(f"圆的面积为: {(round(area, 2))}")
+
